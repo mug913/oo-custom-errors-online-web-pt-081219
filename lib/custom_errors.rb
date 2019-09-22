@@ -9,6 +9,8 @@ class Person
     self.partner = person
     if person.class != person
       raise PartnerError 
+    rescue PartnerError => error 
+      puts.error.message
     else 
       person.partner = self
     end
@@ -18,6 +20,7 @@ class Person
     def message 
       "you must give the get_married method an argument of an instance of the person class!"
     end
+  end
 end
 
 end
