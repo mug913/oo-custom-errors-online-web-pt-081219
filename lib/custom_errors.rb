@@ -10,7 +10,7 @@ class Person
     if person.class != person
       raise PartnerError 
     rescue PartnerError => error 
-      puts.error.message
+      puts error.message
     else 
       person.partner = self
     end
